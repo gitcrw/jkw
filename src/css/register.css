@@ -1,0 +1,179 @@
+body {
+	color: #666;
+	background: #f4f6fa fixed;
+	font: 12px/22px Microsoft YaHei, Simsun, Verdana, Arial, sans-serif;
+	font-size: 14px;
+	background: url(../images/register-bg.jpg) no-repeat;
+}
+
+#register .header {
+	height: 110px;
+}
+
+#register .header .main-content {
+	padding: 50px 20px 20px;
+}
+
+#register .header .main-content .logo {
+	width: 440px;
+}
+
+#register .header .main-content .register-link {
+	font-size: 14px;
+	color: #fff;
+}
+
+#register .article .main-content {
+	height: 620px;
+	background-color: #fff;
+}
+
+#register .article .nav {
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	color: #d5d5d5;
+	font-size: 0;
+}
+
+#register .article .nav .nav-item.active {
+	color: #32a1e8;
+	border-bottom: 1px solid #32a1e8;
+}
+
+#register .article .nav .nav-item {
+	display: inline-block;
+	border-bottom: 1px solid #ddd;
+	font-size: 18px;
+	width: 100%;
+	position: relative;
+}
+
+#register .article .register-form {
+	margin-top: 45px;
+}
+
+#register .article .register-form .form-item {
+	margin-top: 20px;
+	font-size: 0;
+	text-align: center;
+}
+
+#register .article .register-form .form-item .label {
+	display: inline-block;
+	line-height: 45px;
+	font-size: 12px;
+	width: 60px;
+	text-align: right;
+	vertical-align: top;
+}
+
+#register .article .register-form .form-item .content {
+	display: inline-block;
+	font-size: 12px;
+	margin-left: 10px;
+	position: relative;
+}
+
+#register .article .register-form .form-item .content input {
+	width: 350px;
+}
+
+#register .article .register-form .form-item .content input,
+#register .article .register-form .form-item .content select {
+	border: 1px solid #ddd;
+	height: 43px;
+	text-indent: 12px;
+}
+
+.form-group__message {
+	display: none;
+	color: #c33;
+	margin-left: 10px;
+}
+
+#register .article .register-form .form-item.image-code .content input {
+	width: 190px;
+	font-size: 12px;
+}
+
+#register .article .register-form .form-item.image-code .content .image-code-box {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 12px;
+	height: 45px;
+}
+
+#register .article .register-form .form-item.image-code .content .image-code-box img {
+	height: 45px;
+	width: 118px;
+}
+
+#register .article .register-form .form-item.image-code .content .image-code-box a {
+	display: inline-block;
+	vertical-align: top;
+	height: 45px;
+	line-height: 22.5px;
+	color: #008fd2;
+}
+
+#register .article .register-form .register-btn.button {
+	display: inline-block;
+	width: 350px;
+	height: 45px;
+	line-height: 45px;
+	font-size: 20px;
+	font-weight: 500;
+	background-color: #32a1e8;
+	cursor: pointer;
+	text-align: center;
+	color: #fff;
+	border-radius: 4px;
+	outline: none;
+	border: none;
+}
+
+#register .article .register-form .agree a {
+	color: #32a1e8;
+}
+
+#codepic {
+	width: 125px;
+	height: 45px;
+	display: inline-block;
+	margin-left: -6px;
+	border: 1px solid #58bc58;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.form-group__message{
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	display: block;
+	text-align: left;
+}
+.getcode{
+	display: inline-block;
+    width: 140px !important;
+    line-height: 43px;
+    border: 1px solid #ddd;
+    border-left: none;
+    vertical-align: top;
+    font-size: 12px;
+    text-align: center;
+    color: #999;
+    cursor: pointer;
+    margin-left: -5px !important;
+}
+#register .header .main-content .register-link .button {
+    width: 50px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    color: #32a1e8;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+ }

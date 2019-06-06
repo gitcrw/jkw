@@ -1,0 +1,37 @@
+				* {
+					margin: 0;
+					padding: 0;
+				}
+				
+				.con {
+					width: 980px;
+					margin: 0 auto;
+				}
+				
+				body {
+					color: #666;
+					/*background: #f4f6fa fixed;*/
+					font: 12px/22px Microsoft YaHei, Simsun, Verdana, Arial, sans-serif;
+					font-size: 14px;
+				}
+				
+				input,
+				select,
+				textarea {
+					outline: none;
+					border: none;
+					padding: 0;
+					font-size: 12px;
+				}
+				.fl {
+					float: left;
+				}
+				
+				a {
+					color: #666;
+					text-decoration: none;
+				}
+				.fr {
+					float: right;
+				}
+				
