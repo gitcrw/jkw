@@ -2,17 +2,22 @@
 					margin: 0;
 					padding: 0;
 				}
-				
+				ul li{
+					list-style: none;
+				}
 				.con {
 					width: 980px;
 					margin: 0 auto;
 				}
-				
+				.mcon{
+					width: 1210px;
+					margin: 0 auto;
+				}
 				body {
 					color: #666;
 					/*background: #f4f6fa fixed;*/
 					font: 12px/22px Microsoft YaHei, Simsun, Verdana, Arial, sans-serif;
-					font-size: 14px;
+					font-size: 12px;
 				}
 				
 				input,
