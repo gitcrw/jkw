@@ -4,7 +4,7 @@
 	// 轮播图背景颜色
 	var bg_color = ['rgb(197, 55, 69)', 'rgb(71, 166, 224)', 'rgb(155, 21, 21)', 'rgb(40, 65, 147)', 'rgb(124, 183, 223)', 'rgb(93, 120, 105)', 'rgb(255, 178, 188)','rgb(36, 107, 163)','rgb(51, 21, 10)'];
 	//轮播图
-	var swiper = new Swiper('.swiper-container', {
+	var swiper = new Swiper('#banner .swiper-container', {
 
 		noSwiping: true,
 		//  	noSwipingSelector: 'span',
@@ -39,6 +39,32 @@
 	oBox.onmouseout = function() {
 		swiper.autoplay.start();
 	}
+	var oBox = document.getElementsByClassName('swiper-container')[1];
+	oBox.onmouseover = function() {
+		swiper2.autoplay.stop();
+	}
+	oBox.onmouseout = function() {
+		swiper2.autoplay.start();
+	}
+	var swiper2 = new Swiper('.news_r .swiper-container', {
+
+		noSwiping: true,
+		//  	noSwipingSelector: 'span',
+
+		noSwipingClass: 'stop-swiping',
+		effect: 'slide',
+		// grabCursor: true,
+		speed: 1000,
+		loop: true,
+		autoplay: {
+			delay: 2000,
+			disableOnInteraction: false,
+		},
+		navigation: {
+	      nextEl: '.swiper-button-next',
+	      prevEl: '.swiper-button-prev',
+	    },
+	});
 	
 	//渲染商品
 	//热卖专场
@@ -51,11 +77,10 @@
 		},
 		success: function(str) {
 			var obj = JSON.parse(str)
-			console.log(obj);
 			var html = obj.map(function(item) {
 				return `
-					<div class="hot_goods" id="${item.gid}">
-						<a href="">
+					<div class="hot_goods" gid="${item.gid}">
+						<a href="detail.html?${item.gid}">
 							<img src="../db_imgs/${item.fimgurl}" alt="" />
 							<div class="imgbox">
 								<h3>${item.name}</h3>
@@ -64,7 +89,6 @@
 						</a>
 					</div>`
 			}).join('');
-			console.log(html)
 			$('#hot_t').html(html);
 		}
 	})
@@ -77,11 +101,10 @@
 		},
 		success: function(str) {
 			var obj = JSON.parse(str)
-			console.log(obj);
 			var html = obj.map(function(item) {
 				return `
-					<li id="${item.gid}">
-						<a href="">
+					<li gid="${item.gid}">
+						<a href="detail.html?${item.gid}">
 							<img src="../db_imgs/${item.fimgurl}" alt="" />
 							<div class="dt">
 								<h4>${item.name}</h4><h5>${item.desc}</h5>
@@ -89,8 +112,136 @@
 						</a>
 					</li>`
 			}).join('');
-			console.log(html)
 			$('#hot_b').html(html);
 		}
+	})
+	//1F
+	//center
+	function fCenter(star,end,ele) {
+		$.ajax({
+			type:'post',
+			url:'../api/goods.php',
+			data:{
+				star : star,
+				end : end,
+			},
+			success: function(str) {
+				var obj = JSON.parse(str)
+				var html = obj.map(function(item) {
+					return `
+						<div gid="${item.gid}">
+							<img src="../db_imgs/${item.fimgurl}" alt="" />
+							<div class="bottom">
+								<h3>${item.name}</h3>
+								<p>${item.desc}</p>
+							</div>
+						</div>`
+				}).join('');
+				$(ele).html(html);
+			}
+		})
+	}
+	//r_l
+	function fright(star,end,ele) {
+		$.ajax({
+			type:'post',
+			url:'../api/goods.php',
+			data:{
+				star : star,
+				end : end,
+			},
+			success: function(str) {
+				var obj = JSON.parse(str)
+				var html = obj.map(function(item) {
+					return `
+						<li gid="${item.gid}"><a href="detail.html?${item.gid}">
+							<p>${item.name}</p>
+							<img src="../db_imgs/${item.fimgurl}" alt="" />
+						</a></li>`
+				}).join('');
+				$(ele).html(html);
+			}
+		})
+	}
+	//懒加载
+	//当滑动到楼层才开始加载
+	var oneh = $('.onef_h2').offset().top;
+	var twoh = $('.twof_h2').offset().top;
+	var threeh = $('.threef_h2').offset().top;
+	var fourh = $('.fourf_h2').offset().top;
+	var fiveh = $('.fivef_h2').offset().top;
+	var sixh = $('.sixf_h2').offset().top;
+	console.log(oneh)
+	window.onscroll = function() {
+		if(window.scrollY > oneh) {
+			setTimeout(next, 500);
+			function next() {
+				fCenter(17,17,'#onecenter')
+				fright(12,15,'#onerl');
+				fright(12,14,'#onerr');
+			}
+			oneh = 10000000;
+		}
+		if(window.scrollY > twoh) {
+			setTimeout(next, 500);
+			function next() {
+				fCenter(17,17,'#twocenter');
+				fright(12,15,'#tworl');
+				fright(12,14,'#tworr');
+			}
+			twoh = 10000000;
+		}
+		if(window.scrollY > threeh) {
+			setTimeout(next, 500);
+			function next() {
+				fCenter(17,17,'#threecenter');
+				fright(12,15,'#threerl');
+				fright(12,14,'#threerr');
+			}
+			threeh = 10000000;
+		}
+		if(window.scrollY > fourh) {
+			setTimeout(next, 500);
+			function next() {
+				fCenter(17,17,'#fourcenter');
+				fright(12,15,'#fourrl');
+				fright(12,14,'#fourrr');
+			}
+			fourh = 10000000;
+		}
+		if(window.scrollY > fiveh) {
+			setTimeout(next, 500);
+			function next() {
+				fCenter(17,17,'#fivecenter');
+				fright(12,15,'#fiverl');
+				fright(12,14,'#fiverr');
+			}
+			fiveh = 10000000;
+		}
+		if(window.scrollY > sixh) {
+			setTimeout(next, 500);
+			function next() {
+				fCenter(17,17,'#sixcenter');
+				fright(12,15,'#sixrl');
+				fright(12,14,'#sixrr');
+			}
+			sixh = 10000000;
+		}
+	}
+	//点击商品跳转详情页
+	//循环绑定事件
+//	{
+//		$(this).click(function() {
+//			window.open('detail.html?' + $(this).data('gid'));
+//		})
+//	})
+	//选项卡
+	$('#ntab a').hover(function() {
+		$(this).addClass('active').siblings().attr('class','');
+		$('#ninfo>div').eq($(this).index()).addClass('show').siblings().attr('class','');
+	}) 
+	$('#ntab2 a').hover(function() {
+		$(this).addClass('active').siblings().attr('class','');
+		$('#ninfo2>div').eq($(this).index()).addClass('show').siblings().attr('class','');
 	})
 })()

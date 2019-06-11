@@ -3,8 +3,13 @@
 	
 	$star = isset($_POST['star']) ? $_POST['star'] : '';
 	$end = isset($_POST['end']) ? $_POST['end'] : '';
+	$gid = isset($_POST['gid']) ? $_POST['gid'] : '';
 	
-	$sql = "SELECT * FROM goods WHERE gid BETWEEN $star and $end";
+	if($star) {
+		$sql = "SELECT * FROM goods WHERE gid BETWEEN $star and $end";
+	}else{
+		$sql = "SELECT * FROM goods WHERE gid = $gid";
+	}
 	
 	$res = $conn->query($sql);
 	

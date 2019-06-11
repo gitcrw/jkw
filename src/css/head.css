@@ -255,6 +255,7 @@
 	position: relative;
 }
 .list{
+	display: none;
 	font-size: 12px;
 	position: absolute;
 	z-index: 1;
