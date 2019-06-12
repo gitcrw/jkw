@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<link rel="stylesheet" href="../css/content.css" />
+		<link rel="stylesheet" href="../css/car.css" />
+	</head>
+	<body class="song">
+		<div id="head"></div>
+		<div id="logo" class="mcon">
+			<h1><a href=""><img src="../images/logo (1).png"/></a></h1>
+			<h2>购物车</h2>
+			<ul>
+				<li class="li_color"><span class="li_color">1</span><p class="p_color">选择产品</p></li>
+				<li><span>2</span><p>填写核对订单信息 </p></li>
+				<li><span>3</span><p>成功提交订单</p></li>
+			</ul>
+		</div>
+		<div class="tologin mcon" style="display: none;">
+			<i></i>
+			<span>您还没有登录！登录后购物车的商品将保存到您账号中！</span>
+			<a href="login.html" id="tologin">立即登录</a>
+		</div>
+		<div id="tabs" class=" mcon">
+			<div class="tabs">
+				<div class="tab1">购物车</div>
+				<div class="tab2">需求清单</div>
+			</div>
+			<div class="title">
+				<span class="spanl"></span>
+				<span class="spanr">全选</span>
+				<p class="p1">商品信息</p>
+				<p class="p2">单价（元）</p>
+				<p class="p3">数量</p>
+				<p class="p4">小计（元）</p>
+				<p class="p5">操作</p>
+			</div>
+		</div>
+		<div id="goods_info" style="display: none;">
+		<ul class="goods_info mcon">
+			<li>
+				<span class="spanl item"></span>
+				<a href=""><img src="../db_imgs/1.png" alt="" /></a>
+				<p class="name_p"><a href="">感冒灵颗粒(999)</a></p>
+				<p class="spec_p">规格：10g*9袋（999）</p>
+				<p class="price_p">15.00</p>
+				<div class="shop_num">
+					<span class="num_btn">-</span>
+					<input type="text" value="1" id="num_text"/>
+					<span class="num_btn">+</span>
+				</div>
+				<p class="min_total">15.00</p>
+				<a href="">删除</a>
+			</li>
+			<li>
+				<span class="spanl item"></span>
+				<a href=""><img src="../db_imgs/1.png" alt="" /></a>
+				<p class="name_p"><a href="">感冒灵颗粒(999)</a></p>
+				<p class="spec_p">规格：10g*9袋（999）</p>
+				<p class="price_p">15.00</p>
+				<div class="shop_num">
+					<span class="num_btn">-</span>
+					<input type="text" value="1" id="num_text"/>
+					<span class="num_btn">+</span>
+				</div>
+				<p class="min_total">15.00</p>
+				<a href="">删除</a>
+			</li>
+			<li>
+				<span class="spanl item"></span>
+				<a href=""><img src="../db_imgs/1.png" alt="" /></a>
+				<p class="name_p"><a href="">感冒灵颗粒(999)</a></p>
+				<p class="spec_p">规格：10g*9袋（999）</p>
+				<p class="price_p">15.00</p>
+				<div class="shop_num">
+					<span class="num_btn">-</span>
+					<input type="text" value="1" id="num_text"/>
+					<span class="num_btn">+</span>
+				</div>
+				<p class="min_total">15.00</p>
+				<a href="">删除</a>
+			</li>
+		</ul>
+		<ul class="xqqd mcon">需求清单</ul>
+		</div>
+		
+		<div class="goods_bottom mcon">
+			<span class="spanl" id="all_select2"></span>
+			<span class="spanr allsel">全选</span>
+			<div class="gn">
+				<a href="">删除选中的商品</a>
+				<a href="">移到我的收藏夹</a>
+				<a href="">清除下柜商品</a>
+			</div>
+			<a href="" id="js_btn">去结算</a>
+			<div class="all_total">
+				<span class="span1">总价:</span>
+				<span id="all_price">￥0.00</span>
+			</div>
+			<div class="select_num span1">
+				<p>已选择<span id="select_num">0</span>件商品</p>
+				<span>(不含运费)</span>
+			</div>
+		</div>
+	</body>
+	<script src="../../lib/jquery-1.10.1.min.js"></script>
+	<script src="../js/car.js"></script>
+</html>

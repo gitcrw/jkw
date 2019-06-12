@@ -173,6 +173,7 @@
 						//登录成功
 						if(str == 'yes') {
 							alert('登录成功')
+							loginStatus('#phone2','#pwd2');//创建cookie
 							window.location.replace('main.html') //跳转
 						} else {
 							$('.pwd_info2').html('账号或密码错误')
@@ -236,4 +237,16 @@
 		}
 
 	})
+	function loginStatus(user,pwd) {
+		setCookie('user',$(user).val(), 1)
+		setCookie('pwd',$(pwd).val(), 1)
+	}
+	//设置cookie
+	function setCookie(key, val, iday) {
+		var now = new Date();
+		now.setDate(now.getDate() + iday);
+		document.cookie = key + '=' + val + ';expires=' + now + ';path=/';
+	}
+	
+	
 })()

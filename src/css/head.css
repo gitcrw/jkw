@@ -9,6 +9,7 @@
 .top {
 	height: 35px;
 	line-height: 35px;
+	position: relative;
 }
 #head a:hover{
 	color: #0691f9;
@@ -25,6 +26,9 @@
 	float: right;
 	height: 35px;
 	box-sizing: border-box;
+	white-space: nowrap;
+	position: absolute;
+	right: 0;
 }
 
 .top .ul2 li {

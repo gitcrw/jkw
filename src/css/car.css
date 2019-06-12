@@ -1,0 +1,384 @@
+.mcon {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.song {
+	font-family: SimSun;
+}
+
+#search {
+	display: none;
+}
+
+#toolbar {
+	display: none;
+}
+
+#logo {
+	height: 60px;
+	margin: 35px auto;
+}
+
+#logo h1 {
+	float: left;
+	padding-top: 14px;
+}
+
+#logo h1 img {
+	display: block;
+}
+
+#logo h2 {
+	float: left;
+	font-size: 24px;
+	font-weight: 400;
+	height: 42px;
+	display: inline;
+	color: #666;
+	padding-top: 18px;
+}
+
+#logo ul {
+	float: right;
+	width: 480px;
+	margin-top: 18px;
+	display: flex;
+}
+
+#logo ul li {
+	flex: 1;
+	background-color: #ccc;
+	display: inline-block;
+	position: relative;
+	height: 5px;
+}
+
+#logo ul li span {
+	font-size: 14px;
+	color: #fff;
+	line-height: 24px;
+	text-align: center;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background-color: #ccc;
+	position: absolute;
+	left: 50%;
+	top: -8px;
+	margin-left: -12px;
+}
+
+#logo ul li p {
+	font-size: 12px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 20px;
+	text-align: center;
+	color: #999;
+}
+
+.li_color {
+	background: #3797eb !important;
+}
+
+.p_color {
+	color: #3797eb !important;
+}
+
+.tabs {
+	width: 244px;
+	height: 40px;
+	display: flex;
+	color: #333;
+}
+
+.tabs div {
+	flex: 1;
+	text-align: center;
+	border: 1px solid #ccc;
+	line-height: 40px;
+	cursor: pointer;
+	border-bottom: none;
+}
+
+.tabs .tab1 {
+	border-right: 0;
+}
+
+.active {
+	border-top: 4px solid #3797eb !important;
+	line-height: 35px !important;
+}
+
+.title {
+	height: 39px;
+	border: 1px solid #ddd;
+	background: #f3f3f3;
+	padding-left: 24px;
+	position: relative;
+	color: #333;
+}
+
+.spanl {
+	display: block;
+	margin-right: 8px;
+	background: url(../images/order2016.png) -96px 2px no-repeat;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	float: left;
+	position: relative;
+	margin-top: 10px;
+}
+
+.spanr {
+	display: inline-block;
+	width: 27px;
+	line-height: 17px;
+	margin-top: 10px;
+	margin-left: 3px;
+	float: left;
+}
+
+.title p {
+	float: left;
+	line-height: 39px;
+}
+
+.title .p1 {
+	width: 405px;
+	padding-left: 30px;
+}
+
+.title .p2 {
+	width: 162px;
+	padding-left: 5px;
+}
+
+.title .p3 {
+	width: 111px;
+}
+
+.title .p4 {
+	width: 120px;
+	margin-left: 7px;
+	text-align: center;
+}
+
+.title .p5 {
+	width: 50px;
+}
+
+.goods_info {
+	margin-top: 20px;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-top: 1px solid #bbb;
+}
+
+.goods_info li {
+	/*height: 50px;*/
+	padding: 18px 0 18px 24px;
+	overflow: hidden;
+	border-bottom: 1px solid #bbb;
+}
+
+.goods_info a:hover {
+	color: #3797eb;
+}
+
+.goods_info p {
+	float: left;
+}
+
+.item {
+	margin-top: 0;
+}
+
+.goods_info a img {
+	width: 78px;
+	height: 78px;
+	display: block;
+	float: left;
+	margin-right: 12px;
+	border: 1px solid #eee;
+}
+
+.name_p {
+	width: 150px;
+}
+
+.spec_p {
+	width: 145px;
+	color: #999;
+	margin-left: 80px;
+}
+
+.price_p {
+	margin-left: 12px;
+	width: 125px;
+	font-size: 14px;
+}
+
+.shop_num {
+	width: 81px;
+	height: 24px;
+	border: 1px solid #e8e8e8;
+	float: left;
+	margin-right: 60px;
+	font-family: "Microsoft YaHei";
+	font-size: 14px;
+}
+
+.shop_num .num_btn {
+	float: left;
+	width: 20px;
+	background: #f0f0f0;
+	font-size: 21px;
+	line-height: 20px;
+	height: 24px;
+	font-family: "Microsoft YaHei";
+	text-align: center;
+	color: #ccc;
+	cursor: pointer;
+}
+
+.shop_num #num_text {
+	float: left;
+	width: 39px;
+	border: 1px solid #f0f0f0;
+	border-bottom: 0;
+	border-top: 0;
+	height: 24px;
+	outline: 0;
+	text-align: center;
+	color: #3c3c3c;
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+}
+
+.min_total {
+	width: 120px;
+	height: 20px;
+	color: #e4393c;
+	font-family: "Microsoft YaHei";
+	float: left;
+	font-size: 14px;
+	text-align: center;
+}
+
+.goods_bottom {
+	color: #333;
+	height: 60px;
+	background-color: #f9f9f9;
+	margin: 17px auto 0;
+	padding-left: 24px;
+	box-sizing: border-box;
+}
+
+#all_select2,
+.allsel {
+	margin-top: 21px;
+}
+
+.goods_bottom .gn {
+	margin-left: 10px;
+	padding-top: 18px;
+	float: left;
+}
+
+.goods_bottom .span1 {
+	color: #999;
+}
+
+.goods_bottom .gn a {
+	color: #333;
+	margin-right: 8px;
+}
+
+.goods_bottom .gn a:hover {
+	color: #3797eb;
+}
+
+#js_btn {
+	font-family: "Microsoft YaHei";
+	float: right;
+	display: block;
+	background: #ccc;
+	color: #666;
+	width: 150px;
+	height: 60px;
+	/*background: #E4393C;*/
+	font-size: 24px;
+	line-height: 60px;
+	text-align: center;
+}
+
+.all_total {
+	float: right;
+	padding-left: 35px;
+	padding-right: 30px;
+	margin-top: 12px;
+}
+
+#all_price {
+	font-family: "Microsoft YaHei";
+	line-height: 18px;
+	font-size: 18px;
+	color: #e4393c;
+}
+
+.select_num {
+	float: right;
+	margin-top: 12px;
+	text-align: center;
+}
+
+#select_num {
+	font-size: 14px;
+	font-weight: 700;
+	padding: 0 3px;
+	color: #e4393c;
+}
+.tologin{
+	height: 43px;
+    width: 974px;
+    border: 1px solid #EDD28B;
+    background: #FFFDEE;
+    padding-left: 24px;
+    margin-bottom: 20px;
+    line-height: 45px;	
+}
+.tologin span{
+	line-height: 26px;
+    display: block;
+    height: 26px;
+    margin-top: 9px;
+    color: #e4393c;
+    float: left;
+}
+.tologin i{
+	margin-top: 13px;
+	float: left;
+	width: 20px;
+    height: 16px;
+    margin-right: 5px;
+    display: inline-block;
+    background: url(../images/order2016.png) -116px 0 no-repeat;
+    vertical-align: -3px;
+}
+#tologin{
+	display: inline-block;
+    background: url(../images/order2016.png) 0 -30px no-repeat;
+    width: 68px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-style: normal;
+    cursor: pointer;
+    color: #fff;
+    margin-top: 9px;
+}
+

@@ -45,7 +45,7 @@
 }
 
 #pic {
-	border: 1px solid #ccc;
+	/*border: 1px solid #ccc;*/
 	float: left;
 	position: relative;
 	width: 320px;
@@ -62,12 +62,12 @@
 	top: 0;
 	left: 0;
 	position: absolute;
-	width: 100px;
-	height: 100px;
-	background: #ccc;
-	opacity: .5;
+	width: 120px;
+	height: 120px;
 	display: none;
 	cursor: move;
+	background-color: #FFEEA8;
+    opacity: 0.6;
 }
 
 #bigPic {
@@ -84,7 +84,7 @@
 }
 
 #bigPic img {
-	width: 1200px;
+	width: 900px;
 	position: absolute;
 }
 
@@ -93,9 +93,9 @@
 }
 
 .picul {
-	margin-top: 20px;
+	margin-top: 10px;
+	margin-left: 10px;
 	overflow: hidden;
-	width: 320px;
 	text-align: center;
 }
 
@@ -105,12 +105,12 @@
 	display: block;
 	float: left;
 	margin: 0 2px;
-	border: 1px solid #ccc;
+	border: 1px solid #fff;
 	padding: 1px;
 }
 
 .picul img.active {
-	border: 2px solid #93c525;
+	border: 2px solid #ccc;
 	padding: 0;
 }
 
@@ -119,6 +119,8 @@
 }
 .content_l{
 	float: left;
+	padding-bottom: 10px;
+	border: 1px solid #ccc;
 }
 #info{
 	float: left;
@@ -214,4 +216,57 @@
 }
 #addcar{
 	background-position: -189px 0px;
+	position: relative;
+}
+
+.right_menu{
+	position: fixed;
+	right: 8px;
+	top: 300px;
+}
+.right_menu li{
+	width: 60px;
+	height: 60px;
+	background: #ececec;
+	margin-bottom: 2px;
+}
+.right_menu .car{
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+	height: 75px;
+}
+.car i{
+	/*display: inline-block;*/
+	width: 34px;
+	height: 30px;
+	background: url(../images/aside-icon.png) no-repeat;
+	background-position: -45px -3px;
+	display: block;
+    margin: 15px auto 0;
+}
+
+.car span{
+    color: #8a8a8a;
+}
+.right_menu #r_car_num{
+	position: absolute;
+	right: 14px;
+	font-style: normal;
+    top: 10px;
+    display: block;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    padding: 0 5px 0 4px;
+    height: 16px;
+    line-height: 16px;
+    border: 1px solid #e4393c;
+    color: #e4393c;
+    background: #ececec;
+}
+/*购物车动画图片*/
+.car_img{
+	position: absolute;
+	top: 0;
+	left: 0;
 }

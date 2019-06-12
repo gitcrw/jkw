@@ -171,7 +171,6 @@
 	var fourh = $('.fourf_h2').offset().top;
 	var fiveh = $('.fivef_h2').offset().top;
 	var sixh = $('.sixf_h2').offset().top;
-	console.log(oneh)
 	window.onscroll = function() {
 		if(window.scrollY > oneh) {
 			setTimeout(next, 500);
