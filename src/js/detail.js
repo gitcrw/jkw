@@ -175,24 +175,30 @@
 			$(this).val(num);
 		})
 		//检查购物车商品数量
+		var carnum = 0; //购物车所有商品总量
 		var Car = new Promise(function(resolve) {
-			$.ajax({
-				type: "post",
-				url: "../api/checkcar.php",
-				data: {
-					user: getCookie('user'),
-				},
-				success: function(str) {
-					resolve(str);
-				}
-			});
+			//定时刷新购物车
+			var timer = setInterval(refsh,2000);
+			function refsh() {
+				$.ajax({
+					type: "post",
+					url: "../api/checkcar.php",
+					data: {
+						user: getCookie('user'),
+					},
+					success: function(str) {
+						//购物车
+						if(str) {
+							carnum = str - 0; //购物车所有商品总量
+							$('#r_car_num').html(str);
+						}
+						resolve(str);
+					}
+				});
+			}
+			refsh();
 		})
 		Car.then(function(str) {
-			if(str) {
-				$('#r_car_num').html(str);
-			}
-			//购物车
-			var carnum = $('#r_car_num').html() - 0; //购物车所有商品总量
 			$('#addcar').on('click', function() {
 				if(getCookie('user') && getCookie('pwd')) {
 					//刷新购物车页面
@@ -208,7 +214,7 @@
 					//计算飞入购物车的文档距离
 					star = $('#addcar').offset();
 					end = $('#r_car').offset();
-					$('.car_img').animate({
+					$(img).animate({
 						marginLeft: end.left - star.left,
 						marginTop: end.top - star.top
 					}, 600, function() {
@@ -232,14 +238,11 @@
 							user: getCookie('user'),
 							gid: gid,
 							num: buy_num
-						},
-						success: function() {
-							console.log(1)
 						}
 					});
 
 				} else {
-					alert('请登录')
+					alert('请先登录哦!')
 				}
 			})
 		})

@@ -80,7 +80,7 @@
 			var html = obj.map(function(item) {
 				return `
 					<div class="hot_goods" gid="${item.gid}">
-						<a href="detail.html?${item.gid}">
+						<a href="detail.html?${item.gid}" target="_blank">
 							<img src="../db_imgs/${item.fimgurl}" alt="" />
 							<div class="imgbox">
 								<h3>${item.name}</h3>

@@ -1,6 +1,6 @@
 <?php
 	include'conn.php';
-	
+	//首页商品
 	$star = isset($_POST['star']) ? $_POST['star'] : '';
 	$end = isset($_POST['end']) ? $_POST['end'] : '';
 	$gid = isset($_POST['gid']) ? $_POST['gid'] : '';

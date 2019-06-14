@@ -10,7 +10,13 @@
 		
 		$content = $res->fetch_all(MYSQLI_ASSOC);
 		
-		echo $content[0]['SUM(num)'];//该用户购物车总量
+		
+		if($content[0]['SUM(num)']=='') {
+			echo 0;
+		}else {
+			echo $content[0]['SUM(num)'];//该用户购物车总量
+		}
+		
 	}
 	
 ?>

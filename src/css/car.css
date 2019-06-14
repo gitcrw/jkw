@@ -245,7 +245,7 @@
 	cursor: pointer;
 }
 
-.shop_num #num_text {
+.shop_num .num_text {
 	float: left;
 	width: 39px;
 	border: 1px solid #f0f0f0;
@@ -323,7 +323,7 @@
 	margin-top: 12px;
 }
 
-#all_price {
+#all_price,.rmb {
 	font-family: "Microsoft YaHei";
 	line-height: 18px;
 	font-size: 18px;
@@ -381,4 +381,6 @@
     color: #fff;
     margin-top: 9px;
 }
-
+.select{
+	background-position:-96px -13px !important;
+}
