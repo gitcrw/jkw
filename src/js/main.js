@@ -230,6 +230,11 @@
 			}
 			sixh = 10000000;
 		}
+		if(window.scrollY > 500) {//右侧滑动
+			$('.r_st').fadeIn();
+		}else{
+			$('.r_st').fadeOut();
+		}
 	}
 	//点击商品跳转详情页
 	//循环绑定事件
@@ -246,5 +251,18 @@
 	$('#ntab2 a').hover(function() {
 		$(this).addClass('active').siblings().attr('class','');
 		$('#ninfo2>div').eq($(this).index()).addClass('show').siblings().attr('class','');
+	})
+	
+	//右侧菜单
+	$('.r_sm').mouseover(function() {
+		$('.wxxcx').animate({left:-315},200);
+		$('.wxapp').animate({left:-155},200);
+	})
+	$('.r_sm').mouseleave(function() {
+		$('.wxxcx').animate({left:100},200);
+		$('.wxapp').animate({left:260},200);
+	})
+	$('.r_st').click(function() {
+		$('html, body').animate({ scrollTop: 0 }, 500);
 	})
 })()

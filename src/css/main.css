@@ -565,5 +565,92 @@
 	height: 20px;
 	margin-top: -10px;
 }
-
-
+.right_bar{
+	position: fixed;
+	right: 8px;
+	top: 474px;
+	
+}
+.right_bar li{
+	width: 60px;
+	height: 60px;
+	margin-bottom: 1px;
+	overflow: hidden;
+	z-index: 100;
+}
+.right_bar li:nth-child(1) {
+	position: relative;
+}
+.right_bar li:nth-child(2) {
+	height: 74px;
+	width: 60px;
+}
+.right_bar li:nth-child(3){
+	background: rgba(000,000,000,.5);
+	cursor: pointer;
+	display: none;
+}
+.right_bar li:nth-child(3):hover{
+	background: rgba(000,000,000,.8);
+}
+.right_bar li:nth-child(3) i{
+    width: 30px;
+    height: 30px;
+    margin: 12px 0 0 15px;
+    display: block;
+    background: url(../images/jk2016.png) repeat-x;
+    background-position: -90px -245px;
+}
+.wxapp,.wxxcx{
+	position: absolute;
+	top: -13px;
+	left: 100px;
+}
+.wxapp{
+	left: 260px;
+}
+.info div{
+	padding: 20px;
+}
+.info div a{
+	margin-right: 25px;
+	line-height: 26px;
+}
+.info div a:hover{
+	color: #0691f9;
+}
+#ninfo img{
+	width: 103px;
+	height: 103px;
+	float: left;
+	margin-right: 15px;
+}
+#ninfo>div{
+	padding: 0;
+}
+.ninfo_a{
+	display: inline-block;
+	font-size: 16px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.ninfo_p{
+	text-indent: 2em;
+}
+.ninfo_ul{
+	height: 100%;
+	float: left;
+	margin-right:35px
+}
+.ninfo_ul li{
+	list-style: disc inside;
+}
+.ninfo_div{
+	padding: 0 !important;
+	padding-top: 10px !important;
+	padding-left: 20px !important;
+	border-top: 1px dashed #d8d8d8;
+}
+.ninfo_span{
+	color: #0691f9;
+}
