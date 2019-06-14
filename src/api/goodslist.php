@@ -1,9 +1,9 @@
 <?php
 	include 'conn.php';
 	
-	$pagenum = isset($_POST['pagenum']) ? $_POST['pagenum'] : '1';//当前第几页
+	$pagenum = isset($_POST['pagenum']) ? $_POST['pagenum'] : '';//当前第几页
 	
-	$num = isset($_POST['num']) ? $_POST['num'] : '5';//每页要显示多少个
+	$num = isset($_POST['num']) ? $_POST['num'] : '';//每页要显示多少个
 	
 	$star = ($pagenum - 1)* $num;
 	

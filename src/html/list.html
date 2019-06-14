@@ -41,24 +41,34 @@
 				</div>
 				<div class="goods">
 					<ul class="goods-list">
-						<li onclick="tz()">
-							<img src="../db_imgs/11.jpg" alt="" />
-							<div class="goods_info">
-								<span class="goods_price">￥<i class="price">250.0</i></span>
-								<p>金戈10粒装 西地那非适用于治疗勃起功能障碍。</p>
-								<a>查看详情</a>
-							</div>
-						</li>
+						<!--<li>
+							<a href="">
+								<img src="../db_imgs/11.jpg" alt="" />
+								<div class="goods_info">
+									<span class="goods_price">￥<i class="price">250.0</i></span>
+									<p>金戈10粒装 西地那非适用于治疗勃起功能障碍。</p>
+									<a>查看详情</a>
+								</div>
+							</a>
+						</li>-->
 					</ul>
+				</div>
+				<div class="page" onselectstart="return false">
+					<span class="prev">< 上一页</span>
+					<div id="page-item">
+						<div class="page-item">
+							<!--<span>1</span>-->
+						</div>
+					</div>
+					<span class="next">下一页 ></span>
+					<p class="total_pages">共<i class="page_num">42</i>页</p>
+					<p>到第<input type="text" class="tonum"/>页</p>
+					<p class="confirm">确定</p>
 				</div>
 			</div>
 		</div>
+		<div id="foot"></div>
 	</body>
 	<script src="../../lib/jquery-1.10.1.min.js"></script>
 	<script src="../js/list.js"></script>
-	<script type="text/javascript">
-		function tz() {
-			window.open('main.html');
-		}
-	</script>
 </html>

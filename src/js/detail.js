@@ -9,7 +9,7 @@
 		})
 		$('.telimg').attr('src', '../images/indexzx.jpg');
 	});
-
+	$('#foot').load('foot.html')
 	//放大镜
 	function big(ele) {
 		var fdj = document.getElementById(ele);

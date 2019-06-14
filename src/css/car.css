@@ -121,13 +121,13 @@
 	color: #333;
 }
 
-.spanl {
+.spanl{
 	display: block;
 	margin-right: 8px;
 	background: url(../images/order2016.png) -96px 2px no-repeat;
 	cursor: pointer;
-	width: 16px;
-	height: 16px;
+	width: 16px ;
+	height: 16px ;
 	float: left;
 	position: relative;
 	margin-top: 10px;
@@ -383,4 +383,13 @@
 }
 .select{
 	background-position:-96px -13px !important;
+}
+#bottom{
+	margin-top: 50px !important;
+}
+.footer_img {
+	width: 520px !important;	
+}
+.bottom ul {
+    margin-right: 64px !important;
 }

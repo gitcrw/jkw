@@ -1,6 +1,6 @@
 (function() {
 	$('#head').load('head.html');
-
+	$('#foot').load('foot.html');
 	function getCookie(key) {
 		var str = document.cookie;
 		var arr = str.split('; ');

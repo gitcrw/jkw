@@ -5,7 +5,6 @@
 		now.setDate(now.getDate() + iday);
 		document.cookie = key + '=' + val + ';expires=' + now + ';path=/';
 	}
-
 	function getCookie(key) {
 		var str = document.cookie;
 		var arr = str.split('; ');
@@ -20,7 +19,11 @@
 	function removeCookie(key) {
 		setCookie(key, '', -1);
 	}
-
+	
+	//点击分类跳转到列表页
+	$('.list li').click(function() {
+		window.open('list.html')
+	})
 	if(getCookie('user') && getCookie('pwd')) {
 		//登录
 		$.ajax({

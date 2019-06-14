@@ -116,6 +116,10 @@
 
 #content {
 	padding-top: 20px;
+	height: 416px;
+}
+.bottom ul {
+    margin-right: 60px !important;
 }
 .content_l{
 	float: left;
