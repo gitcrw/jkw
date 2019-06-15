@@ -4,7 +4,7 @@
 	// 轮播图背景颜色
 	var bg_color = ['rgb(197, 55, 69)', 'rgb(71, 166, 224)', 'rgb(155, 21, 21)', 'rgb(40, 65, 147)', 'rgb(124, 183, 223)', 'rgb(93, 120, 105)', 'rgb(255, 178, 188)','rgb(36, 107, 163)','rgb(51, 21, 10)'];
 	//轮播图
-	var swiper = new Swiper('#banner .swiper-container', {
+	var swiper = new Swiper('.banner .swiper-container', {
 
 		noSwiping: true,
 		//  	noSwipingSelector: 'span',

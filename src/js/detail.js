@@ -212,8 +212,8 @@
 					img.src = $('#picimg').attr('src');
 					$('#addcar').append(img);
 					//计算飞入购物车的文档距离
-					star = $('#addcar').offset();
-					end = $('#r_car').offset();
+					var star = $('#addcar').offset();
+					var end = $('#r_car').offset();
 					$(img).animate({
 						marginLeft: end.left - star.left,
 						marginTop: end.top - star.top
