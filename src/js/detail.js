@@ -68,7 +68,7 @@
 	}
 
 	//根据商品gid查找数据库渲染
-	var gid = decodeURI(location.search).slice(1);
+	var gid = decodeURI(location.search).slice(1);//接收？1
 	var xr = new Promise(function(resolve) {
 		$.ajax({
 			type: 'post',
@@ -110,7 +110,7 @@
             	</div>
             	<div class="info_xz">
             		<span class="spanl">用药须知：</span>
-            		<span>${item.know}</span>
+            		<div class="ohid"><span>${item.know}</span></div>
             	</div>
             	<div class="info_place">
             		<span class="spanl">生产厂家：</span>

@@ -132,7 +132,7 @@
 							if($(this).html()>= pages - 3) {
 								left = (pages - 8) * -37
 							}else{
-								if(pagenum < 15) {
+								if(pagenum < pages - 3) {
 									var n = pagenum - $(this).html();
 								}else {
 									var n = pages - 3 - $(this).html();

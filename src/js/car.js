@@ -127,6 +127,7 @@
 					$('.allselect').removeClass('select').attr('status',false);
 				}
 				Total();
+				showBuy();
 			})
 			//全选
 			$('.allselect').on('click',function() {
@@ -138,6 +139,7 @@
 					$('.allselect').addClass('select').attr('status',true);
 				}
 				Total();
+				showBuy();
 			})
 			
 			//删除
@@ -149,6 +151,7 @@
 					deleteCar(gid);
 					Total();
 					checkNull();
+					showBuy();
 				}
 			});
 			//删除选中
@@ -164,6 +167,7 @@
 						})
 						Total();
 						checkNull();
+						showBuy();
 					}
 				}
 			})
@@ -182,6 +186,7 @@
 						alert('结算成功！你购买了'+$(select_num).html()+'件商品，共花费了'+$('#all_price').html() + '元');
 						Total();
 						checkNull();
+						showBuy();
 					}
 				}
 			});
@@ -191,6 +196,13 @@
 			function checkNull() {
 				if($(".item").size() == 0) {
 					$('#goods_info').css('display','none')
+				}
+			}
+			function showBuy() {
+				if($(".item[status='true']").size() > 0) {
+					$('#js_btn').addClass('buyactive');
+				}else{
+					$('#js_btn').removeClass('buyactive');
 				}
 			}
 			function Total() {

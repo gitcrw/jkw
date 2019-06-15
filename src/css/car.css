@@ -393,3 +393,7 @@
 .bottom ul {
     margin-right: 64px !important;
 }
+.buyactive{
+	background: #E4393C !important;
+    color: #fff !important;
+}

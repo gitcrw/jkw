@@ -153,6 +153,10 @@
 	
 }
 #info div{
+	/*overflow: hidden;*/
+	/*width: 630px;*/
+}
+.ohid,.info_t,.info_name,.info_bh,.info_wh,.info_price,.info_place,.info_xz,.info_num{
 	overflow: hidden;
 }
 .spanl{
@@ -203,7 +207,7 @@
 }
 
 .jt_b{
-	top: 19px;
+	top: 18px;
 	background-position:-120px -143px;
 }
 .jt_b:hover{

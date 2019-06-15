@@ -180,17 +180,17 @@
 			setTimeout(next, 500);
 			function next() {
 				fCenter(17,17,'#onecenter')
-				fright(12,15,'#onerl');
-				fright(12,14,'#onerr');
+				fright(18,21,'#onerl');
+				fright(22,24,'#onerr');
 			}
 			oneh = 10000000;
 		}
 		if(window.scrollY > twoh) {
 			setTimeout(next, 500);
 			function next() {
-				fCenter(17,17,'#twocenter');
-				fright(12,15,'#tworl');
-				fright(12,14,'#tworr');
+				fCenter(25,25,'#twocenter');
+				fright(26,29,'#tworl');
+				fright(30,32,'#tworr');
 			}
 			twoh = 10000000;
 		}
