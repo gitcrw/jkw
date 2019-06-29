@@ -174,7 +174,7 @@
 						if(str == 'yes') {
 							alert('登录成功')
 							loginStatus('#phone2','#pwd2');//创建cookie
-							window.location.replace('main.html') //跳转
+							window.location.replace('index.html') //跳转
 						} else {
 							$('.pwd_info2').html('账号或密码错误')
 						}
@@ -201,7 +201,8 @@
 							if(str == 'no') {
 								//no为存在,进行登录
 								alert('登录成功')
-								window.location.replace('main.html') //跳转
+								loginStatus('#phone2','#pwd2');//创建cookie
+								window.location.replace('index.html') //跳转
 							} else {
 								//不存在就创建登录
 								$.ajax({
@@ -215,7 +216,8 @@
 
 										//no为存在,进行登录
 										alert('登录成功')
-										window.location.replace('main.html') //跳转
+										loginStatus('#phone2','#pwd2');//创建cookie
+										window.location.replace('index.html') //跳转
 									}
 								})
 								//发送短信通知
